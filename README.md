@@ -1,37 +1,23 @@
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+TypeOrm 迁移脚本项目
 
 ## Installation
 
 ```bash
-$ npm install
+$ yarn install
 ```
 
-## Running the app
+## 新增迁移脚本
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+$ yarn migration:create xx
 ```
 
-## Test
+## 运行迁移脚本
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+$ yarn migration:run
 ```
 
 ## Support

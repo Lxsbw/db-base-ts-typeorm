@@ -8,5 +8,5 @@ module.exports = {
   migrationsTableName: 'Migrations_History',
   // namingStrategy: new SnakeNamingStrategy(),
   // entities: ['src/models/*.entity{.ts,.js}'],
-  migrations: ['migrations/*{.ts,.js}']
+  migrations: ['database/migrations/*{.ts,.js}']
 };

@@ -85,6 +85,7 @@ export class initMobilePhone1613925819007 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.query('DROP TABLE `mobile_phone`');
+    // await queryRunner.query('DROP TABLE `mobile_phone`');
+    await queryRunner.dropTable('mobile_phone');
   }
 }
