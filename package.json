@@ -1,0 +1,43 @@
+{
+  "name": "db-base-ts-typeorm",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "typeorm": "ts-node node_modules/typeorm/cli.js -f ormconfig",
+    "migration:generate": "yarn run typeorm migration:generate -d src/migrations -n",
+    "migration:create": "yarn run typeorm migration:create -d src/migrations -n",
+    "migration:run": "yarn run typeorm migration:run",
+    "migration:revert": "yarn run typeorm migration:revert",
+    "del": "rimraf node_modules dist yarn.lock"
+  },
+  "dependencies": {
+    "mysql2": "^2.2.5",
+    "rimraf": "^3.0.2",
+    "typeorm": "^0.2.31"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.6",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.0.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}
