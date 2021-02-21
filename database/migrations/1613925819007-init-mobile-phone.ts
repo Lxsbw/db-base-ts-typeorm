@@ -1,5 +1,6 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 // import { MigrationInterface, QueryRunner, Table, TableIndex, TableColumn, TableForeignKey } from "typeorm";
+import { baseModel } from '../utils/base-model';
 
 export class initMobilePhone1613925819007 implements MigrationInterface {
   name = 'initMobilePhone1613925819007';
@@ -9,34 +10,7 @@ export class initMobilePhone1613925819007 implements MigrationInterface {
       new Table({
         name: 'mobile_phone',
         columns: [
-          {
-            name: 'id',
-            type: 'varchar',
-            length: '50',
-            comment: 'key',
-            isPrimary: true
-          },
-          {
-            name: 'created_at',
-            type: 'datetime',
-            length: '6',
-            comment: '创建时间',
-            default: 'CURRENT_TIMESTAMP(6)'
-          },
-          {
-            name: 'updated_at',
-            type: 'datetime',
-            length: '6',
-            comment: '更新时间',
-            default: 'CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6)'
-          },
-          {
-            name: 'deleted_at',
-            type: 'datetime',
-            length: '6',
-            comment: '删除时间',
-            isNullable: true
-          },
+          ...baseModel,
           {
             name: 'model_name',
             type: 'varchar',
