@@ -11,7 +11,7 @@
     "migration:create": "yarn run typeorm migration:create -d database/migrations -n",
     "migration:run": "yarn run typeorm migration:run",
     "migration:revert": "yarn run typeorm migration:revert",
-    "del": "rimraf node_modules dist yarn.lock"
+    "del": "rimraf node_modules dist"
   },
   "dependencies": {
     "mysql2": "^2.2.5",
