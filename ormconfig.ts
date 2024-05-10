@@ -5,6 +5,7 @@ module.exports = {
   username: 'root',
   password: 'Admin@123',
   database: 'typeorm_init',
+  // database: 'midway_test',
   migrationsTableName: 'Migrations_History',
   // namingStrategy: new SnakeNamingStrategy(),
   // entities: ['src/models/*.entity{.ts,.js}'],
